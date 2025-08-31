@@ -85,20 +85,6 @@ pip install -r requirements.txt
 
 Results will be displayed in the terminal and exported to plots inside the `images/` folder.
 
----
-
-## 📊 Results (examples)
-
-### AES – Encryption vs Decryption
-![AES](images/aes_encryption_vs_decryption.png)
-
-### RSA – Encryption vs Decryption
-![RSA](images/rsa_encryption_vs_decryption.png)
-
-### SHA-256 – Hash Generation
-![SHA-256](images/sha256_hash.png)
-
----
 
 ## 📄 Report
 The full academic report is available here:  
