@@ -54,12 +54,16 @@ We measure **encryption**, **decryption** and **hashing** performance, analysing
 - **RSA standard deviation (encryption & decryption)**  
   ![RSA Standard Deviation](images/11.png)
 
-- **AES standard deviation (encryption & decryption)**  
-  ![AES Standard Deviation](images/13.png)
+- **AES Encryption vs Decryption Times (log‑log)**  
+  ![RSA Enc vs Dec](images/10.png)
+
+
+
 
 ### Performance Comparisons
-- **RSA Encryption vs Decryption Times (log‑log)**  
-  ![RSA Enc vs Dec](images/10.png)
+
+- **AES vs RSA Encryption (log‑log)**  
+  ![AES Standard Deviation](images/13.png)
 
 - **AES vs RSA Encryption (log‑log)**  
   ![AES vs RSA](images/14.png)
