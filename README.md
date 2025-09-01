@@ -98,7 +98,9 @@ We measure **encryption**, **decryption** and **hashing** performance, analysing
 ---
 
 ## 👩‍💻 Author
+- Ana Sofia Quintero
 - Liliana Silva
+- Catarina Abrantes
 
 ---
 
