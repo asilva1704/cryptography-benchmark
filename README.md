@@ -1,79 +1,76 @@
 # Cryptography Benchmark
 
-[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/) 
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Made with Matplotlib](https://img.shields.io/badge/Made%20with-Matplotlib-orange)](https://matplotlib.org/)
-[![Made with Numpy](https://img.shields.io/badge/Made%20with-NumPy-blueviolet)](https://numpy.org/)
+[![Made with NumPy](https://img.shields.io/badge/Made%20with-NumPy-blueviolet)](https://numpy.org/)
 
-A benchmarking study comparing the performance of **AES, RSA, and SHA-256** across different file sizes and scenarios.  
-The project evaluates **encryption, decryption, and hashing times**, focusing on performance variability, scalability, and efficiency.
+Benchmarking study of **AES**, **RSA** and **SHA‑256** across multiple file sizes and scenarios.  
+We measure **encryption**, **decryption** and **hashing** performance, analysing both **speed** and **stability** (standard deviation).
 
 ---
 
 ## ✨ Project Highlights
-- Benchmarked three widely used cryptographic algorithms:
-  - **AES** (symmetric encryption)
-  - **RSA** (asymmetric encryption)
-  - **SHA-256** (hashing)
-- Performance tested with:
-  - Increasing file sizes (from a few bytes to MBs)
-  - Repeated encryption/decryption vs. multiple file scenarios
-- Evaluation metrics:
-  - **Execution times (µs)**
-  - **Standard deviation** for performance stability
-- Results include **plots and comparative charts** for deep analysis.
+- Algorithms: **AES (symmetric)**, **RSA (asymmetric)**, **SHA‑256 (hash)**.
+- Scenarios: single file repeated N times vs **N different files**.
+- Sizes: from a few bytes up to **MB** scale (log‑log comparisons).
+- Metrics: mean **execution time (µs)** and **standard deviation** (stability).
+- Deliverables: clean **notebook**, **figures** (in `images/`) and report.
 
 ---
 
 ## 📂 Repository Structure
 ```
 .
-├── data/                        # Input files (test dataset)
-├── images/                      # Plots and benchmark results
-│   ├── aes_std.png
-│   ├── rsa_std.png
-│   ├── sha256_std.png
-│   ├── rsa_enc_vs_dec.png
-│   ├── aes_vs_rsa.png
-│   ├── aes_vs_sha256.png
-│   └── ...
+├── data/                          # Test inputs (optional)
+├── images/                        # All generated figures (1.png … 15.png)
+│   ├── 10.png   # RSA encryption vs decryption (log‑log)
+│   ├── 11.png   # RSA standard deviation (enc/dec)
+│   ├── 12.png   # SHA‑256 standard deviation (hashing)
+│   ├── 13.png   # AES standard deviation (enc/dec)
+│   ├── 14.png   # AES vs RSA encryption (log‑log)
+│   ├── 15.png   # AES vs SHA‑256 encryption (log‑log)
+│   └── …        # other figures (1–9)
 ├── notebooks/
-│   └── cryptography_benchmark.ipynb   # Main notebook with code & analysis
+│   └── cryptography_benchmark.ipynb   # Main notebook (code & analysis)
 ├── reports/
-│   └── cryptography_report.pdf        # Final project report
-├── requirements.txt             # Python dependencies
-├── LICENSE                      # MIT License
-└── README.md                    # This file
+│   └── cryptography_report.pdf        # Final project report (optional)
+├── requirements.txt                   # Python dependencies
+├── LICENSE                            # MIT License
+└── README.md                          # This file
 ```
+
+> ℹ️ **Important:** Image links below use the exact filenames in your repo (`images/10.png`, `images/11.png`, …).  
+> If an image doesn’t render on GitHub, check that the **filename and extension match exactly** (case‑sensitive).
 
 ---
 
 ## 📊 Visualizations
 
 ### Standard Deviation Analysis
-- **SHA-256 hashing stability**  
-  ![SHA-256 Standard Deviation](images/sha256_std.png)
+- **SHA‑256 hashing stability**  
+  ![SHA‑256 Standard Deviation](images/12.png)
 
 - **RSA standard deviation (encryption & decryption)**  
-  ![RSA Standard Deviation](images/rsa_std.png)
+  ![RSA Standard Deviation](images/11.png)
 
 - **AES standard deviation (encryption & decryption)**  
-  ![AES Standard Deviation](images/aes_std.png)
+  ![AES Standard Deviation](images/13.png)
 
 ### Performance Comparisons
-- **RSA Encryption vs Decryption Times (log-log)**  
-  ![RSA Enc vs Dec](images/rsa_enc_vs_dec.png)
+- **RSA Encryption vs Decryption Times (log‑log)**  
+  ![RSA Enc vs Dec](images/10.png)
 
-- **AES vs RSA Encryption**  
-  ![AES vs RSA](images/aes_vs_rsa.png)
+- **AES vs RSA Encryption (log‑log)**  
+  ![AES vs RSA](images/14.png)
 
-- **AES vs SHA-256 Encryption**  
-  ![AES vs SHA256](images/aes_vs_sha256.png)
+- **AES vs SHA‑256 Encryption (log‑log)**  
+  ![AES vs SHA‑256](images/15.png)
 
 ---
 
 ## ▶️ How to Run
-1. Ensure **Python 3.11+** is installed.  
+1. Install **Python 3.11+**.
 2. (Optional) Create a virtual environment:
    ```bash
    python -m venv .venv
@@ -92,24 +89,18 @@ The project evaluates **encryption, decryption, and hashing times**, focusing on
 ---
 
 ## 🔧 Dependencies
-- numpy  
-- matplotlib  
-- timeit  
-- jupyter  
-- ipykernel  
-
-
----
-
-## 👩‍💻 Authors
-- Ana Sofia Quintero
-- Liliana Silva 
-- Catarina Abrantes
-
+- numpy
+- matplotlib
+- timeit
+- jupyter
+- ipykernel
 
 ---
-=======
 
+## 👩‍💻 Author
+- Liliana Silva
+
+---
 
 ## 📄 License
-This project is licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
+Licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
