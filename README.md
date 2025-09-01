@@ -1,116 +1,109 @@
 # Cryptography Benchmark
 
-## 📌 Overview
-This project benchmarks three fundamental cryptographic algorithms — **AES, RSA, and SHA-256** — implemented in Python.  
-The goal is to evaluate their **performance, scalability, and stability** under different conditions, providing valuable insights into symmetric encryption, asymmetric encryption, and hashing.  
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Made with Matplotlib](https://img.shields.io/badge/Made%20with-Matplotlib-orange)](https://matplotlib.org/)
+[![Made with Numpy](https://img.shields.io/badge/Made%20with-NumPy-blueviolet)](https://numpy.org/)
 
-This repository contains both the **source code** and the **final academic report**, making it a practical and theoretical reference for cryptography and information security.
-
----
-
-## ✨ Features
-- **AES (Advanced Encryption Standard)**: Encryption and decryption using CBC mode with PKCS7 padding.
-- **RSA (Rivest–Shamir–Adleman)**: Public-key encryption/decryption with OAEP padding (2048-bit keys).
-- **SHA-256**: Secure Hash Algorithm for data integrity verification.
-- **Performance analysis**: Execution time measured with microsecond precision.
-- **Statistical analysis**: Outlier removal, averages, and standard deviation.
-- **Visualization**: Clear and comparative plots using Matplotlib.
+A benchmarking study comparing the performance of **AES, RSA, and SHA-256** across different file sizes and scenarios.  
+The project evaluates **encryption, decryption, and hashing times**, focusing on performance variability, scalability, and efficiency.
 
 ---
 
-## 📂 Project Structure
+## ✨ Project Highlights
+- Benchmarked three widely used cryptographic algorithms:
+  - **AES** (symmetric encryption)
+  - **RSA** (asymmetric encryption)
+  - **SHA-256** (hashing)
+- Performance tested with:
+  - Increasing file sizes (from a few bytes to MBs)
+  - Repeated encryption/decryption vs. multiple file scenarios
+- Evaluation metrics:
+  - **Execution times (µs)**
+  - **Standard deviation** for performance stability
+- Results include **plots and comparative charts** for deep analysis.
+
+---
+
+## 📂 Repository Structure
 ```
-cryptography-benchmark/
-├── src/                       # Python source code
-│   ├── parte1_sp.py           # AES, RSA, SHA-256 benchmarks
-│   └── parte2_sp.py           # Data analysis & visualization
-│
-├── report/
-│   └── RelatorioFINAL.pdf     # Full academic report
-│
-├── images/                    # Graphs used in README & report
-│   ├── aes_encryption_vs_decryption.png
-│   ├── rsa_encryption_vs_decryption.png
-│   ├── sha256_hash.png
-│   ├── comparison_aes_rsa.png
-│   ├── comparison_aes_sha.png
-│   └── rsa_enc_vs_dec.png
-│
-├── requirements.txt           # Dependencies
-├── README.md                  # Project documentation
-└── LICENSE                    # MIT License
-```
-
----
-
-## ⚙️ Requirements
-- Python 3.11+  
-- Packages listed in `requirements.txt`
-
-Main libraries:
-- `cryptography`
-- `hashlib`
-- `numpy`
-- `pandas`
-- `matplotlib`
-
-Install dependencies with:
-```bash
-pip install -r requirements.txt
+.
+├── data/                        # Input files (test dataset)
+├── images/                      # Plots and benchmark results
+│   ├── aes_std.png
+│   ├── rsa_std.png
+│   ├── sha256_std.png
+│   ├── rsa_enc_vs_dec.png
+│   ├── aes_vs_rsa.png
+│   ├── aes_vs_sha256.png
+│   └── ...
+├── notebooks/
+│   └── cryptography_benchmark.ipynb   # Main notebook with code & analysis
+├── reports/
+│   └── cryptography_report.pdf        # Final project report
+├── requirements.txt             # Python dependencies
+├── LICENSE                      # MIT License
+└── README.md                    # This file
 ```
 
 ---
 
-## 🚀 Installation & Usage
-1. Clone the repository:
+## 📊 Visualizations
+
+### Standard Deviation Analysis
+- **SHA-256 hashing stability**  
+  ![SHA-256 Standard Deviation](images/sha256_std.png)
+
+- **RSA standard deviation (encryption & decryption)**  
+  ![RSA Standard Deviation](images/rsa_std.png)
+
+- **AES standard deviation (encryption & decryption)**  
+  ![AES Standard Deviation](images/aes_std.png)
+
+### Performance Comparisons
+- **RSA Encryption vs Decryption Times (log-log)**  
+  ![RSA Enc vs Dec](images/rsa_enc_vs_dec.png)
+
+- **AES vs RSA Encryption**  
+  ![AES vs RSA](images/aes_vs_rsa.png)
+
+- **AES vs SHA-256 Encryption**  
+  ![AES vs SHA256](images/aes_vs_sha256.png)
+
+---
+
+## ▶️ How to Run
+1. Ensure **Python 3.11+** is installed.  
+2. (Optional) Create a virtual environment:
    ```bash
-   git clone https://github.com/your-username/cryptography-benchmark.git
-   cd cryptography-benchmark
+   python -m venv .venv
+   source .venv/bin/activate       # macOS/Linux
+   .venv\Scripts\activate        # Windows
    ```
-
-2. Install dependencies:
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-
-3. Run benchmarks (AES, RSA, SHA-256):
+4. Launch the notebook:
    ```bash
-   python src/parte1_sp.py
+   jupyter notebook notebooks/cryptography_benchmark.ipynb
    ```
 
-4. Run analysis & generate plots:
-   ```bash
-   python src/parte2_sp.py
-   ```
+---
 
-Results will be displayed in the terminal and exported to plots inside the `images/` folder.
+## 🔧 Dependencies
+- numpy  
+- matplotlib  
+- timeit  
+- jupyter  
+- ipykernel  
 
 ---
 
-## 📊 Results (examples)
-
-### AES – Encryption vs Decryption
-![AES](images/aes_encryption_vs_decryption.png)
-
-### RSA – Encryption vs Decryption
-![RSA](images/rsa_encryption_vs_decryption.png)
-
-### SHA-256 – Hash Generation
-![SHA-256](images/sha256_hash.png)
+## 👩‍💻 Authors
+- Liliana Silva  
 
 ---
 
-## 📄 Report
-The full academic report is available here:  
-📑 [RelatorioFINAL.pdf](report/RelatorioFINAL.pdf)
-
----
-
-## 📜 License
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👩‍💻 Author
-Developed by Liliana Silva, Catarina Abrantes and Ana Sofia Quintero, as part of the *Security and Privacy* course at the University of Porto.  
-Showcasing expertise in **cryptography, performance analysis, and secure software development**.
+## 📄 License
+This project is licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
