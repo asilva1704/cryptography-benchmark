@@ -98,12 +98,18 @@ The project evaluates **encryption, decryption, and hashing times**, focusing on
 - jupyter  
 - ipykernel  
 
+
 ---
 
 ## 👩‍💻 Authors
-- Liliana Silva  
+- Ana Sofia Quintero
+- Liliana Silva 
+- Catarina Abrantes
+
 
 ---
+=======
+
 
 ## 📄 License
 This project is licensed under the **MIT License** — see [LICENSE](./LICENSE) for details.
